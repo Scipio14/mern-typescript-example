@@ -1,0 +1,4 @@
+node_modules
+backend/db.txt
+backend/.env
+logs
