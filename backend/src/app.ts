@@ -2,6 +2,7 @@ import "dotenv/config";
 import express, { NextFunction, Request, Response } from "express";
 import * as path from "path";
 import morgan from "morgan";
+// import cors from "cors";
 import { notesRoutes, rootRoute } from "./routes";
 import { logger, logEvents } from "./middleware/logger";
 import createHttpError, { isHttpError } from "http-errors";
@@ -12,6 +13,7 @@ const app = express();
 app.use(logger);
 
 app.use(express.json());
+// app.use(cors());
 
 app.use(express.static(path.join(__dirname, "../public")));
 
