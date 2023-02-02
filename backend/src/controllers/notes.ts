@@ -10,7 +10,6 @@ export const getNotes: RequestHandler = async (
 ) => {
   try {
     const notes = await NoteModel.find().exec();
-
     res.status(200).json(notes);
   } catch (error) {
     next(error);

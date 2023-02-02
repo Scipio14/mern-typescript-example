@@ -4,10 +4,11 @@ import * as path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server:{
-    proxy:{
-      '/api':'http://localhost:4000'
-    }
+  server: {
+    proxy: {
+      "/api": "http://localhost:4000",
+    },
+    port: 3000,
   },
   plugins: [react()],
   resolve: {
